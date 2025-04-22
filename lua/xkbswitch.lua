@@ -27,7 +27,7 @@ else
         xkb_switch_lib = '/usr/local/lib/libg3kbswitch.so'
     else
         -- xkb-switch
-        local all_libs_locations = vim.fn.systemlist('ldd $(which xkb-switch)')
+        local all_libs_locations = vim.fn.systemlist('ldd /home/uartman/Programming/xkb-switch/build/xkb-switch')
         for _, value in ipairs(all_libs_locations) do
             if string.find(value, 'libxkbswitch.so.1') or string.find(value, 'libxkbswitch.so.2') then
                 if string.find(value, 'not found') then
